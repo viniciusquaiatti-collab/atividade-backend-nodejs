@@ -1,0 +1,136 @@
+type: collection.insomnia.rest/5.0
+name: 25Q-DEV.BE-N1
+meta:
+  id: wrk_a5c71e21e50148cbb94d1ad2593bcde4
+  created: 1761171750569
+  modified: 1762188686589
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_ff5af04f1855425ab83e7db40ae573d9
+      created: 1762464620054
+      modified: 1763163980120
+      sortKey: -1762464620054
+      description: ""
+    children:
+      - url: localhost:8081/produtos
+        name: Listar Produtos
+        meta:
+          id: req_34f99ce919c24fac93ff9d4329d989ba
+          created: 1762464625095
+          modified: 1762988342549
+          isPrivate: false
+          description: ""
+          sortKey: -1762464625095
+        method: GET
+        parameters:
+          - id: pair_aa29b72941534b62849e7d65fab4bbe4
+            name: idProduto
+            value: FF1EF440-8CD7-43A1-B6B3-C6012F7FAC4B
+            description: ""
+            disabled: true
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos
+        name: Criar Produto
+        meta:
+          id: req_05b2eeae7fd44d388367618a03f8c19d
+          created: 1762473399082
+          modified: 1762988525558
+          isPrivate: false
+          description: ""
+          sortKey: -1762473399082
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nomeProduto": "Cerveja Heinneken",
+             	"precoProduto": 7
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/10B6AEFF-F1B6-4E34-950C-A4EB6CACC750
+        name: Atualizar Produto
+        meta:
+          id: req_d15667bce1264a34b021e62355b0f326
+          created: 1763079896175
+          modified: 1763079954139
+          isPrivate: false
+          description: ""
+          sortKey: -1763079896175
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"precoProduto": 8
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/10B6AEFF-F1B6-4E34-950C-A4EB6CACC750
+        name: Deletar Produto
+        meta:
+          id: req_139dddb2c24b4729bcf3035c4fdc72d9
+          created: 1763160585155
+          modified: 1763160617069
+          isPrivate: false
+          description: ""
+          sortKey: -1763079896275
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f761aa453b98939bc6cb66c6ad7f2c145484e924
+    created: 1761171750577
+    modified: 1761171750577
+environments:
+  name: Base Environment
+  meta:
+    id: env_f761aa453b98939bc6cb66c6ad7f2c145484e924
+    created: 1761171750575
+    modified: 1761171750575
+    isPrivate: false
